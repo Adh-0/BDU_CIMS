@@ -7,12 +7,14 @@ All notable project milestones are documented here.
 - Refined the project around a cleaner question-answering experience
 - Improved the structure of the repository and public-facing documentation
 - Consolidated the project into a versioned summary for presentation purposes
+- Finalized the project narrative for the public archive
 
 ## v1.0
 
 - Expanded the project beyond the initial prototype
 - Organized the system into clearer functional layers
 - Focused the scope on student support and document-backed answers
+- Stabilized the project layout for the main release
 
 ## v0.1
 
