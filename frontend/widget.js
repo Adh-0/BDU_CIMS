@@ -66,7 +66,7 @@ const API_URL = "http://localhost:5000/chat";
             display: flex; flex-direction: column; gap: 12px; 
         }
         
-        /* BUBBLES */
+        /* BUBBLE */
         .msg { 
             padding: 12px 16px; border-radius: 12px; max-width: 85%; 
             font-size: 15px; line-height: 1.5; word-wrap: break-word;
