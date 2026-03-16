@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What courses are available after 12th?",
+        "must_contain_any": ["B.Sc", "B.A", "B.Com", "Undergraduate", "UG"],
+        "must_not_contain": ["M.Sc", "M.A", "MBA", "Postgraduate"]
+    },
+    {
+        "question": "What is the fee for MCA?",
+        "must_contain_any": ["fee", "MCA", "Rs"],
+        "must_not_contain": []
+    },
+    {
+        "question": "What postgraduate programmes are available?",
+        "must_contain_any": ["M.Sc", "M.A", "MBA", "Postgraduate", "PG"],
+        "must_not_contain": []
+    },
+    {
+        "question": "How do I apply for admission?",
+        "must_contain_any": ["admission", "apply", "application"],
+        "must_not_contain": []
+    },
+    {
+        "question": "What is the capital of France?",
+        "must_contain_any": ["don't have", "cannot", "only help", "Bharathidasan"],
+        "must_not_contain": ["Paris"]
+    },
+    {
+        "question": "Tell me about five year integrated courses",
+        "must_contain_any": ["Integrated", "five", "5"],
+        "must_not_contain": []
+    },
+    {
+        "question": "What are the departments at BDU?",
+        "must_contain_any": ["department", "Department", "School"],
+        "must_not_contain": []
+    },
+    {
+        "question": "What is the eligibility for B.Sc Computer Science?",
+        "must_contain_any": ["eligibility", "12th", "plus two", "10+2", "Computer Science"],
+        "must_not_contain": []
+    }
+]

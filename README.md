@@ -1,56 +1,57 @@
-# Local RAG System with FAISS + Hugging Face Chat
+# BDU CIMS — Retrieval-Augmented Generation (RAG) Chatbot
 
-This project implements a **local Retrieval-Augmented Generation (RAG) pipeline**
-using FAISS for vector search and Sentence-Transformers for embeddings.
-Answers are generated using Hugging Face `InferenceClient` chat models.
+![Version](https://img.shields.io/badge/version-2.0-blue)
+![Python](https://img.shields.io/badge/python-3.11%2B-brightgreen)
 
----
+An AI-powered institutional chatbot built for Bharathidasan University. It securely answers student questions regarding admissions, fees, and courses based exclusively on official university documents.
 
-## ✨ Features
+## 🌟 What's New in v2?
 
-- Local document ingestion (PDF, DOCX, TXT, MD)
-- Chunking and semantic embedding
-- Persistent FAISS vector index
-- Hugging Face chat-based Q&A
-- Environment-based configuration
-- Windows + Python 3.11 compatible
+The `v2/` directory contains a complete production-ready rewrite of the system:
+- **FastAPI backend** with Server-Sent Events (SSE) for real-time answer streaming.
+- **Hybrid Search** combining FAISS (semantic) and BM25 (keyword) via Reciprocal Rank Fusion.
+- **Groq & Ollama routing**: Develop instantly with Groq cloud models, deploy privately with local Ollama models.
+- **Smart incremental ingestion**: SQLite hash-tracking ensures only new/changed documents are re-indexed.
+- **XSS-Secured Frontend**: Safe DOM rendering.
 
----
-
-## 📁 Project Structure
-
-```
-RAG_CHAT/
-├── PDF/                # Input documents (PDFs)
-├── index/              # FAISS vector index (generated)
-├── frontend/
-│   ├── index.html      # Chat widget UI
-│   └── widget.js       # Frontend logic
-├── api.py              # Flask API server
-├── ingest.py           # Document ingestion & indexing
-├── query.py            # CLI question answering
-├── requirements.txt
-├── .env                # Hugging Face token (not tracked)
-├── .gitignore
-└── README.md
-```
+*Read the [Full v2 Documentation](DOCUMENTATION_v2.0.md) for architecture details.*
 
 ---
 
-## 🧰 Requirements
+## 🚀 Quick Start (v2)
 
-- Windows 10/11
-- Python 3.11+
-- Hugging Face account + API token
-
----
-
-## 🚀 Setup
-
-### 1️⃣ Create virtual environment
-
-```bash
-python -m venv rag
-rag\Scripts\activate
+### 1. Setup
+```powershell
+cd v2
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+### 2. Configuration
+Copy the env template and add your Groq API key:
+```powershell
+copy .env.example .env
+# Edit .env and set GROQ_API_KEY
+```
+
+### 3. Ingest Documents
+Drop your PDF files into `v2/data/documents/` and run the indexer:
+```powershell
+python -m ingestion.run_ingest
+```
+
+### 4. Run Server
+```powershell
+python -m api.server
+```
+Visit `http://localhost:8000` to use the chatbot.
+
+---
+
+## Repository Structure
+
+- `v2/` — **The active v2 production codebase.** 
+- `PDF/`, `index/`, `api.py`, `ingest.py`, `query.py`, `frontend/` — *The legacy v1 codebase (kept for reference).*
+- `DOCUMENTATION_v2.0.md` — Detailed v2 architecture and developer guide.
+- `DOCUMENTATION_v0.1b.md` — Legacy v1 documentation.

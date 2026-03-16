@@ -1,0 +1,27 @@
+# ── BDU RAG Chatbot v2 — Dependencies ──
+
+# --- LLM Providers ---
+groq>=0.13.0
+ollama>=0.4.0
+
+# --- Vector Search ---
+faiss-cpu>=1.9.0
+rank-bm25>=0.2.2
+
+# --- Embeddings ---
+sentence-transformers>=3.3.0
+
+# --- Text Splitting ---
+langchain-text-splitters>=0.3.0
+
+# --- Document Loaders ---
+pdfplumber>=0.11.0
+python-docx>=1.1.0
+
+# --- API ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+sse-starlette>=2.0.0
+
+# --- Utilities ---
+python-dotenv>=1.0.1

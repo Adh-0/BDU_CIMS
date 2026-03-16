@@ -1,0 +1,11 @@
+# Environment
+.env
+venv/
+__pycache__/
+
+# Generated storage
+storage/
+
+# IDE
+.vscode/
+.idea/
