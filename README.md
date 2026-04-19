@@ -16,7 +16,7 @@ The system was originally built as a retrieval-augmented chatbot that reads from
 
 - `v0.1` - Initial proof of concept for document-based student support
 - `v1.0` - Expanded question answering workflow and organized the project structure
-- `v2.0` - Refined the retrieval workflow and polished the public-facing summary
+- `v2.0` - Finalized the public archive and refined the project summary
 
 ## Design Goals
 

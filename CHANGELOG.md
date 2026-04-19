@@ -8,6 +8,7 @@ All notable project milestones are documented here.
 - Improved the structure of the repository and public-facing documentation
 - Consolidated the project into a versioned summary for presentation purposes
 - Finalized the project narrative for the public archive
+- Prepared the final v2 project snapshot for public release
 
 ## v1.0
 
