@@ -38,7 +38,9 @@ The project was organized into separate layers for:
 ## Notes
 
 This public repository contains the project overview and version notes only.
+The source code is closed-source and is not included here.
+The README is kept as the public summary of the project.
 
 ## Status
 
-The repository is intentionally kept code-free for public viewing.
+The repository is intentionally kept code-free for public viewing, while the README remains as the project overview.
